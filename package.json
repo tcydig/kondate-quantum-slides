@@ -1,0 +1,17 @@
+{
+  "name": "kondate-quantum-slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "marp --html --pptx --pdf --images png slides/",
+    "watch": "marp --html --watch --server slides/",
+    "compile": "marp --html slides/ -o output/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}

@@ -1,0 +1,14 @@
+# Marp Export Files
+*.pdf
+*.pptx
+*.html
+
+# Dependencies
+node_modules/
+
+# Output
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
