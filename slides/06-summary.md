@@ -1,42 +1,8 @@
 ---
 marp: true
+theme: kondate
 paginate: true
 ---
-
-<style>
-section {
-  background: linear-gradient(135deg, #FFF9F0 0%, #FFF3E0 100%);
-  color: #3E2723;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", sans-serif;
-  padding: 50px 60px;
-}
-h1 {
-  color: #E65100;
-  font-size: 2.2em;
-  border-bottom: none;
-  text-align: center;
-}
-h2 {
-  color: #BF360C;
-  font-size: 1.7em;
-  border-bottom: 3px solid #FFAB91;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-h3 { color: #D84315; font-size: 1.2em; }
-strong { color: #E65100; }
-section::after { color: #BCAAA4; font-size: 0.7em; }
-
-section.closing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 40%, #FFCC80 100%);
-}
-</style>
 
 ## 🍚 三方よしの最適化が拓く未来
 

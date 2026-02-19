@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "marp --html --pptx --pdf --images png slides/",
-    "watch": "marp --html --watch --server slides/",
-    "compile": "marp --html slides/ -o output/"
+    "build": "marp --pptx --pdf --images png slides/",
+    "watch": "marp --watch --server slides/",
+    "compile": "marp slides/ -o output/"
   },
   "keywords": [],
   "author": "",

@@ -1,38 +1,8 @@
 ---
 marp: true
+theme: kondate
 paginate: true
 ---
-
-<style>
-section {
-  background: linear-gradient(135deg, #FFF9F0 0%, #FFF3E0 100%);
-  color: #3E2723;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", sans-serif;
-  padding: 50px 60px;
-}
-h2 {
-  color: #BF360C;
-  font-size: 1.7em;
-  border-bottom: 3px solid #FFAB91;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-}
-h3 { color: #D84315; font-size: 1.2em; }
-strong { color: #E65100; }
-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.85em; }
-th { background: #E65100; color: #fff; padding: 10px 16px; text-align: left; }
-td { padding: 10px 16px; border-bottom: 1px solid #FFCCBC; }
-tr:nth-child(even) td { background: rgba(255, 171, 145, 0.15); }
-pre {
-  background: #3E2723; color: #FFCCBC; border-radius: 12px;
-  padding: 20px 24px; font-size: 0.8em;
-  box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);
-}
-pre code { background: none; color: inherit; padding: 0; }
-code { background: rgba(255,138,101,0.12); color: #BF360C; padding: 2px 6px; border-radius: 4px; }
-ul { line-height: 1.8; }
-section::after { color: #BCAAA4; font-size: 0.7em; }
-</style>
 
 ## 🔄 三方よしの同時最適化
 
