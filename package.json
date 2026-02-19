@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "marp --pptx --pdf --images png slides/",
-    "watch": "marp --watch --server slides/",
-    "compile": "marp slides/ -o output/"
+    "merge": "node scripts/merge.js",
+    "merge:watch": "node scripts/merge.js --watch",
+    "build": "npm run merge && marp --pptx --pdf --images png slides/",
+    "watch": "concurrently \"npm run merge:watch\" \"marp --watch --server slides/\"",
+    "compile": "npm run merge && marp slides/ -o output/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.2.3"
+    "@marp-team/marp-cli": "^4.2.3",
+    "chokidar": "^5.0.0",
+    "concurrently": "^9.2.1"
   }
 }
