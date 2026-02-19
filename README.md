@@ -34,13 +34,13 @@ VS Code
 
 npm run を使用して、執筆や書き出しを行います。
 
-  コマンド                内容
-  ----------------------- -----------------------------------------------
-  npm run watch           スライド変更を監視し、all.md自動生成 & プレビュー
-  npm run build           all.md をマージして PPTX を output/ に生成
-  npm run build -- pdf    all.md をマージして PDF を output/ に生成
-  npm run build -- png    all.md をマージして PNG を output/ に生成
-  npm run merge           all.md を手動で再生成
+| コマンド | 内容 |
+| --- | --- |
+| `npm run watch` | スライド変更を監視し、all.md自動生成 & プレビュー |
+| `npm run build` | all.md をマージして PPTX を output/ に生成 |
+| `npm run build -- pdf` | all.md をマージして PDF を output/ に生成 |
+| `npm run build -- png` | all.md をマージして PNG を output/ に生成 |
+| `npm run merge` | all.md を手動で再生成 |
 
 ------------------------------------------------------------------------
 
