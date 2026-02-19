@@ -6,9 +6,8 @@
   "scripts": {
     "merge": "node scripts/merge.js",
     "merge:watch": "node scripts/merge.js --watch",
-    "build": "npm run merge && marp --pptx --pdf --images png slides/",
-    "watch": "concurrently \"npm run merge:watch\" \"marp --watch --server slides/\"",
-    "compile": "npm run merge && marp slides/ -o output/"
+    "build": "npm run merge && node scripts/build.js",
+    "watch": "concurrently \"npm run merge:watch\" \"marp --watch --server slides/\""
   },
   "keywords": [],
   "author": "",
