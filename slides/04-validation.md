@@ -13,7 +13,7 @@ paginate: true
 </div>
 <div style="flex: 1; border-left: 4px solid #FF8A65; background: rgba(255,138,101,0.08); padding: 16px 20px; border-radius: 0 12px 12px 0;">
 <div style="font-size: 0.8em; color: #BF360C; font-weight: bold; margin-bottom: 8px;">調理員へのヒアリング</div>
-「調理に時間がかかるメニューが多いと<strong>早朝出社や前日仕込み</strong>が必要になる」
+「調理に時間がかかるメニューが多いと<strong>当日の作業量が過大</strong>になる」
 </div>
 </div>
 
