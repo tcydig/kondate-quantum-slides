@@ -48,12 +48,42 @@ npm run を使用して、執筆や書き出しを行います。
 
 ``` text
 .
-├── slides/          # スライド本体 (.md)
-├── themes/          # カスタムCSS
-├── output/          # 書き出し結果 (Git管理外)
-├── .vscode/         # VS Code共有設定
-└── package.json     # 依存・スクリプト
+├── slides/                # スライド本体 (.md)
+│   ├── 01-existence.md    #   存在意義
+│   ├── 02-overview.md     #   アプリ概要
+│   ├── 03-technical.md    #   技術的アプローチ
+│   ├── 04-validation.md   #   現場検証・パフォーマンス
+│   ├── 05-business.md     #   ロードマップ・展開
+│   ├── 06-summary.md      #   まとめ・Appendix
+│   └── all.md             #   ↑を結合した完成版（自動生成）
+├── scripts/
+│   ├── merge.js           # slides/*.md → all.md を結合するスクリプト
+│   └── build.js           # Marp CLIでall.mdをPPTX/PDF/PNGに変換
+├── themes/
+│   └── kondate.css        # Marp用カスタムテーマ
+├── docs/
+│   └── presentation-brief.md  # プレゼン企画・構成ブリーフ
+├── output/                # 書き出し結果 (Git管理外)
+├── .github/workflows/
+│   ├── ci.yml             # PR時にall.mdの整合性を検証
+│   └── release.yml        # タグ push (v*) で PPTX を自動ビルド＆GitHub Release
+├── .vscode/               # VS Code共有設定（Marp拡張推奨）
+├── .marprc.yml            # Marp設定（テーマディレクトリ指定）
+└── package.json           # 依存・スクリプト定義
 ```
+
+### スライド生成の流れ
+
+``` text
+slides/01〜06.md  →  merge.js  →  slides/all.md  →  Marp CLI  →  output/all.pptx
+```
+
+### GitHub Actions
+
+| ワークフロー | トリガー | 内容 |
+| --- | --- | --- |
+| **CI** (`ci.yml`) | PRが `main` に向けて作成されたとき | `npm run merge` を実行し、`all.md` がコミット済みの内容と一致するか検証 |
+| **Release** (`release.yml`) | `v*` タグが push されたとき | 日本語フォント(Noto CJK)をインストール → PPTX をビルド → GitHub Release にアップロード |
 
 ------------------------------------------------------------------------
 
