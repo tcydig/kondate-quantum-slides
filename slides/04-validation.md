@@ -4,76 +4,73 @@ theme: kondate
 paginate: true
 ---
 
-## 🎙️ 現場の声 — 調理員ヒアリング
+## 🎙️ 現場の声が設計を変えた
 
-<div style="display: flex; gap: 20px; margin-bottom: 20px;">
+<div style="display: flex; gap: 20px; margin-bottom: 16px;">
 <div style="flex: 1; border-left: 4px solid #FF8A65; background: rgba(255,138,101,0.08); padding: 16px 20px; border-radius: 0 12px 12px 0;">
-<div style="font-size: 0.8em; color: #BF360C; font-weight: bold; margin-bottom: 8px;">調理員Aさんの声</div>
-「調理に時間がかかるメニューが多いと、<strong>早朝に出社</strong>したり<strong>前日から仕込み</strong>が必要」
+<div style="font-size: 0.8em; color: #BF360C; font-weight: bold; margin-bottom: 8px;">栄養士へのヒアリング</div>
+「給食はA/Bの<strong>複数コース</strong>が前提。1コースだけの最適化では使えない」
 </div>
 <div style="flex: 1; border-left: 4px solid #FF8A65; background: rgba(255,138,101,0.08); padding: 16px 20px; border-radius: 0 12px 12px 0;">
-<div style="font-size: 0.8em; color: #BF360C; font-weight: bold; margin-bottom: 8px;">調理員Bさんの声</div>
-「献立の見直しを依頼しても<strong>『もう決まっているから変えられない』</strong>と断られる」
+<div style="font-size: 0.8em; color: #BF360C; font-weight: bold; margin-bottom: 8px;">調理員へのヒアリング</div>
+「調理に時間がかかるメニューが多いと<strong>早朝出社や前日仕込み</strong>が必要になる」
 </div>
 </div>
 
-### 浮かび上がった4つの課題
+<div style="display: flex; gap: 16px;">
 
-<div style="display: flex; gap: 16px; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px; background: rgba(255,138,101,0.1); border-radius: 12px; padding: 16px; text-align: center;">
-<div style="font-size: 1.6em;">⏰</div>
-<div style="font-weight: bold; color: #BF360C; margin: 4px 0;">早朝出勤・前日準備</div>
-<div style="font-size: 0.8em;">調理時間の多いメニューが負担に</div>
+<div style="flex: 1; background: rgba(191,54,12,0.06); border-radius: 12px; padding: 16px;">
+<div style="font-weight: bold; color: #BF360C; margin-bottom: 8px;">既存研究との乖離</div>
+<div style="font-size: 0.88em; line-height: 1.8;">
+・複数コースの存在を想定していない<br>
+・調理員の負荷が考慮されていない<br>
+→ 既存QUBOをそのまま流用できない
 </div>
-<div style="flex: 1; min-width: 200px; background: rgba(255,138,101,0.1); border-radius: 12px; padding: 16px; text-align: center;">
-<div style="font-size: 1.6em;">🚫</div>
-<div style="font-weight: bold; color: #BF360C; margin: 4px 0;">献立変更の拒否</div>
-<div style="font-size: 0.8em;">栄養士に依頼しても通らない</div>
 </div>
-<div style="flex: 1; min-width: 200px; background: rgba(255,138,101,0.1); border-radius: 12px; padding: 16px; text-align: center;">
-<div style="font-size: 1.6em;">⚖️</div>
-<div style="font-weight: bold; color: #BF360C; margin: 4px 0;">立場の格差</div>
-<div style="font-size: 0.8em;">栄養士（公務員）vs 調理員</div>
+
+<div style="flex: 1; background: rgba(191,54,12,0.06); border-radius: 12px; padding: 16px;">
+<div style="font-weight: bold; color: #BF360C; margin-bottom: 8px;">実用上の課題</div>
+<div style="font-size: 0.88em; line-height: 1.8;">
+・20日×300品で変数数6,000に膨張<br>
+・解の品質が不安定・実行時間も実用外<br>
+→ 条件が増えるほど悪化する構造
 </div>
-<div style="flex: 1; min-width: 200px; background: rgba(255,138,101,0.1); border-radius: 12px; padding: 16px; text-align: center;">
-<div style="font-size: 1.6em;">👥</div>
-<div style="font-weight: bold; color: #BF360C; margin: 4px 0;">人手不足の悪循環</div>
-<div style="font-size: 0.8em;">負担 → 離職 → さらに人手不足</div>
 </div>
+
+</div>
+
+<div style="text-align: center; margin-top: 16px; padding: 12px; background: rgba(191, 54, 12, 0.08); border-radius: 12px;">
+
+ヒアリングの結果、**既存QUBOの改良ではなく、スケーラブルな再設計が必要**と判断
+
 </div>
 
 ---
 
-## 🔄 本アプリがもたらす変化
+## 📊 実測パフォーマンス
 
-<div style="display: flex; gap: 32px; align-items: stretch; margin: 24px 0;">
+<div style="text-align: center; margin-bottom: 16px;">
 
-<div style="flex: 1; background: linear-gradient(180deg, #FFEBEE, #FFCDD2); border-radius: 16px; padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="text-align: center; font-size: 1.2em; font-weight: bold; color: #C62828; margin-bottom: 16px;">😔 Before</div>
-<div style="font-size: 0.9em; line-height: 2;">
-1. 栄養士が献立を決定<br>
-2. 調理員は従うだけ<br>
-3. 負担・不満の蓄積<br>
-4. 離職・人手不足
-</div>
-</div>
-
-<div style="display: flex; align-items: center; font-size: 2.5em; color: #E65100;">▶</div>
-
-<div style="flex: 1; background: linear-gradient(180deg, #E8F5E9, #C8E6C9); border-radius: 16px; padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="text-align: center; font-size: 1.2em; font-weight: bold; color: #2E7D32; margin-bottom: 16px;">😊 After</div>
-<div style="font-size: 0.9em; line-height: 2;">
-1. 量子アニーリングが三方よしの献立を提案<br>
-2. 調理負荷も考慮済み<br>
-3. 現場の声が仕組みに反映<br>
-4. 持続可能な職場環境
-</div>
-</div>
+レシピ数 N=295、M=20日（A/Bコース同時最適化）での実測結果
 
 </div>
 
-<div style="text-align: center; padding: 16px; background: rgba(191, 54, 12, 0.08); border-radius: 12px;">
+| 方式 | 変数数 | 実行時間 | 短縮率 | solver |
+|:---:|:---:|:---:|:---:|:---:|
+| M日一括 | 5,900 | ~120秒 | — | AE |
+| 逐次 | 590（固定） | ~70秒 | 42%短縮 | AE |
+| **投機的並列** | **590（固定）** | **~55秒** | **54%短縮** | **AE + SQBM+** |
 
-調理員の声を **「データ」** として組み込むことで、**構造的な不均衡を技術で解消する**
+<div style="display: flex; gap: 20px; margin-top: 20px;">
+
+<div style="flex: 1; background: rgba(46,125,50,0.08); border-radius: 12px; padding: 16px; border-left: 4px solid #66BB6A;">
+<div style="font-weight: bold; color: #2E7D32; margin-bottom: 6px;">変数空間の固定化</div>
+<div style="font-size: 0.85em;">変数数はN×2で日数Mに非依存。N=500品でも1,000変数に収まり、条件が増えても破綻しない</div>
+</div>
+
+<div style="flex: 1; background: rgba(230,81,0,0.08); border-radius: 12px; padding: 16px; border-left: 4px solid #FF8A65;">
+<div style="font-weight: bold; color: #E65100; margin-bottom: 6px;">実行時間の半減</div>
+<div style="font-size: 0.85em;">一括方式の120秒から55秒へ。2台のアニーリングマシンの待ち時間を重畳し、さらなる短縮を実現</div>
+</div>
 
 </div>
